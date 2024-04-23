@@ -1,0 +1,190 @@
+@import "./styles/utils/index.scss";
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete__content {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  @media #{$md,$sm,$xs} {
+    padding: 5%;
+  }
+
+  .close {
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+
+  h2 {
+    color: var(--tp-theme-2);
+    font-size: 4rem;
+    line-height: 4.2rem;
+    margin-bottom: 2rem;
+    @media #{$sm,$xs} {
+      font-size: 3rem;
+      line-height: 3.3rem;
+    }
+  }
+
+  .message {
+    color: var(--tp-common-text);
+    margin-top: 2rem;
+    width: 100%;
+    h3,
+    li {
+      text-align: justify;
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.6rem;
+      @media #{$sm,$xs} {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+      }
+    }
+    ul,
+    li {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.card__form {
+  width: 100%;
+  box-shadow: 0px 0px 11px 2px #0000001a;
+  border-radius: 0.5rem;
+  padding: 2%;
+  @media #{$md,$sm,$xs} {
+    padding: 5%;
+  }
+
+  h3 {
+    text-align: justify;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--tp-common-black);
+    @media #{$sm,$xs} {
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+    }
+  }
+  .other {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    &:focus,
+    :focus-visible:hover {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+    textarea {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border: 1px solid var(--tp-common-text);
+      border-radius: 0.5rem;
+      &:focus,
+      :focus-visible:hover {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+    }
+  }
+}
+.form-check {
+  margin-top: 1rem;
+  .form-check-label {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--tp-common-text);
+    padding-left: 0.5rem;
+    @media #{$sm,$xs} {
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  &:focus,
+  :focus-visible:hover {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+.form-check-input:checked {
+  background-color: var(--tp-common-green) !important;
+  border-color: var(--tp-common-green) !important;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn-green {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  border: 0;
+  background: var(--tp-theme-1);
+  padding: 0.7rem 1.5rem;
+  border-radius: 1rem;
+  color: var(--tp-common-black);
+  @media #{$sm,$xs} {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+.btn-transparent {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--tp-common-text);
+  border: 0;
+  background: transparent;
+  @media #{$sm,$xs} {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+
+.swal2-modal {
+  background: linear-gradient(90deg, #006855 10%, #00cea9 98%);
+}
+
+.swal2-title,
+.swal2-html-container {
+  color: var(--tp-common-white) !important;
+}
+
+.swal2-confirm {
+  background-color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important;
+  box-shadow: none !important;
+}
+
+.swal2-warning,
+.swal2-success,
+.swal2-error {
+  border-color: var(--tp-common-white) !important;
+  color: var(--tp-common-white) !important;
+}
+
+.swal2-x-mark-line-right,
+.swal2-x-mark-line-left {
+  background-color: var(--tp-common-white) !important;
+}
