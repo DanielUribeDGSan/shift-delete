@@ -24,18 +24,30 @@ export const useShift = () => {
         config
       );
       Swal.fire({
-        title: "Motivo agregado",
-        text: data.message,
+        title: "Cuenta eliminada",
+        text: "Tu cuenta ha sido eliminada correctamente",
         icon: "success",
         confirmButtonText: "Aceptar",
       });
     } catch (error) {
-      Swal.fire({
-        title: "Ocurrió un error",
-        text: error.response.data.error,
-        icon: "error",
-        confirmButtonText: "Aceptar",
-      });
+      const respError = error.response.data;
+      console.log("respError", respError);
+
+      if (respError.codeError === 1) {
+        Swal.fire({
+          title: "Ocurrió un error",
+          text: respError.error,
+          icon: "error",
+          confirmButtonText: "Aceptar",
+        });
+      } else {
+        Swal.fire({
+          title: "Cuenta eliminada",
+          text: "Tu cuenta ha sido eliminada correctamente",
+          icon: "success",
+          confirmButtonText: "Aceptar",
+        });
+      }
     }
   };
 

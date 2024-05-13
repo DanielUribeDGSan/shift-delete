@@ -18,7 +18,7 @@ function HomeScreen() {
         <img className="img-fluid" src={heartImage} alt="corazón roto" />
         <div className="message">
           <h3>
-            Estas a punto de eliminar tú cuenta de shift. Al eliminar tu cuenta
+            Estas a punto de eliminar tú cuenta de SHIFT. Al eliminar tu cuenta
             recuerda que se perderá:
           </h3>
           <ul>

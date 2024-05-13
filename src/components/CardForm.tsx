@@ -43,7 +43,7 @@ export const CardForm = () => {
     if (user) {
       setLoading(true);
       const reasonValidate = reason === "Otro" ? reasonOther : reason;
-      await addReason(reasonValidate || reason, user);
+      await addReason(reasonValidate || reason, user.toString());
       setLoading(false);
     }
     cleanForm();
@@ -59,7 +59,7 @@ export const CardForm = () => {
       <div className="w-100">
         <div className="card__form">
           <h3>
-            ¿Cuál es el motivo por el que deseas eliminar tu cuenta de shift?
+            ¿Cuál es el motivo por el que deseas eliminar tu cuenta de SHIFT?
           </h3>
           <hr />
           <form>
